@@ -16,6 +16,7 @@ const backpack = {
     left: 26,
     right: 26,
   },
+  lidOpen: false,
   toggleLid: function (lidStatus) {
     this.lidOpen = lidStatus;
   },
@@ -23,4 +24,11 @@ const backpack = {
     this.strapLength.left = lengthLeft;
     this.strapLength.right = lengthRight;
   },
+  newVolume: function (newVolume) {
+    this.volume = newVolume;
+  },
 };
+
+console.log("Volume Before: ", backpack.volume);
+backpack.newVolume(50);
+console.log("Volume After: ", backpack.volume);
